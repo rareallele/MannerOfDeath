@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> 
+</head>
+
+<body>
+    <br>
+    <div class="text-section">
+        <h4></h4>
+        <p>
+
+        </p>
+        <br>
+    </div>
+
+    <div class="row">
+        <div id="dropdown" style="width: 100%">
+            <label for="fig_select"><strong style="font-size: 1em;">Select figure:</strong></label><br>
+            <select id="fig_select" class="form-control" style="width: 100%" onchange="cod_setIframe()">
+                <option id="figure1" value="Figures/bar_all.html">Figure 1: All deaths</option>
+                <option id="figure2" value="Figures/bar_natural.html">Figure 2: Illness and disease</option>
+                <option id="figure3" value="Figures/bar_sudi.html">Figure 3: SUDI</option>
+                <option id="figure4" value="Figures/bar_prem.html">Figure 4: Prematurity</option>
+                <option id="figure5" value="Figures/bar_transport.html">Figure 5: Transport-related deaths</option>
+            </select>
+            <br>
+        </div>
+    </div>
+
+    <div class="row" id="buttonBlock">
+        <button  id="percentage" class="cod-sub-button activeButton" value="Figures/bar_all.html" onclick="subButtonSetIframe(this)">Percentage</button>
+        <button id="count" class="cod-sub-button" value="Figures/bar_all_num.html" onclick="subButtonSetIframe(this)">Count</button>
+    </div>
+
+
+    <div class="row">
+
+        <div class="if-container" style="padding-top: 65%;">
+            <iframe class="responsive-iframe" src="Figures/bar_all.html" id="figure-display"></iframe>
+        </div>
+        
+    </div>
+
+    <div><br></div>
+        
+</body>
+
+</html>
