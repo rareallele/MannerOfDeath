@@ -1,7 +1,5 @@
 function cod_setIframe() {
   // Get values
-  let selected_fig = document.getElementById("fig_select");
-  let selectionID = selected_fig.options[selected_fig.selectedIndex].id;
   let selected_value = document.getElementById("fig_select").value;
   // Set iframe
   document.getElementById("figure-display").src = selected_value;
@@ -23,19 +21,14 @@ function subButtonSetIframe(clickedButton) {
     });
     clickedButton.classList.add('activeButton');
     let measure = clickedButton.id;
-    console.log(measure);
     let selection = document.getElementById("fig_select");
     let selectionID = selection.options[selection.selectedIndex].id;
-    console.log(selectionID);
     let fig = document.getElementById("figure-display");
-
-    //document.getElementById("figure-display").src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_all.html";
 
     if (measure == 'percentage'){
       switch(selectionID){
         case 'figure1':
-          document.getElementById("figure-display").src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_all.html";
-          console.log(fig.src);
+          fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_all.html";
           break;
         case 'figure2':
           fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_natural.html";
@@ -57,7 +50,6 @@ function subButtonSetIframe(clickedButton) {
           break;
         case 'figure2':
           fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_natural_num.html";
-          console.log(fig.src);
           break;
         case 'figure3':
           fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_sudi_num.html";
@@ -68,8 +60,6 @@ function subButtonSetIframe(clickedButton) {
         case 'figure5':
           fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_transport_num.html";
       }
-    }
-
-    
+    }  
 }
 
