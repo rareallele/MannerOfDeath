@@ -29,48 +29,46 @@ function subButtonSetIframe(clickedButton) {
     console.log(selectionID);
     let fig = document.getElementById("figure-display");
 
-    document.getElementById("figure-display").src = clickedButton.value;
+    //document.getElementById("figure-display").src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_all.html";
 
-    /*
-    switch(measure){
-      case 'percentage':
-        switch(selectionID){
-          case 'figure1':
-            document.getElementById("figure-display").src = "Figures/bar_all.html";
-            console.log(fig.src);
-            break;
-          case 'figure2':
-            fig.src = "Figures/natural_all.html";
-            break;
-          case 'figure3':
-            fig.src = "Figures\\sudi_all.html";
-            break;
-          case 'figure4':
-            fig.src = "Figures\\prem_all.html";
-            break;
-          case 'figure5':
-            fig.src = "Figures\\transport_all.html";
-        };
-      case 'count':
-        switch(selectionID){
-          case 'figure1':
-            fig.src = "Figures/bar_num.html";
-            break;
-          case 'figure2':
-            fig.src = "Figures\\natural_num.html";
-            console.log(fig.src);
-            break;
-          case 'figure3':
-            fig.src = "Figures\\sudi_num.html";
-            break;
-          case 'figure4':
-            fig.src = "Figures\\prem_num.html";
-            break;
-          case 'figure5':
-            fig.src = "Figures\\transport_num.html";
-        }
+    if (measure == 'percentage'){
+      switch(selectionID){
+        case 'figure1':
+          document.getElementById("figure-display").src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_all.html";
+          console.log(fig.src);
+          break;
+        case 'figure2':
+          fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_natural.html";
+          break;
+        case 'figure3':
+          fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_sudi.html";
+          break;
+        case 'figure4':
+          fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_prem.html";
+          break;
+        case 'figure5':
+          fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_transport.html";
+      };
     }
-    */
+    else if (measure == 'count'){
+      switch(selectionID){
+        case 'figure1':
+          fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_all_num.html";
+          break;
+        case 'figure2':
+          fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_natural_num.html";
+          console.log(fig.src);
+          break;
+        case 'figure3':
+          fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_sudi_num.html";
+          break;
+        case 'figure4':
+          fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_prem_num.html";
+          break;
+        case 'figure5':
+          fig.src = "https://rareallele.github.io/MannerOfDeath/Figures/bar_transport_num.html";
+      }
+    }
 
     
 }
